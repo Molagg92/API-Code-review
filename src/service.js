@@ -1,6 +1,6 @@
 export default class CurerncyService {  
-  static getCurrency(foreinCurrency) {
-    return fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`)
+  static getCurrency(userInputUS, foreinCurrency) {
+    return fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/pair/USD/${foreinCurrency}/${userInputUS}`)
       .then(function(response) {
         if (!response.ok) {
           const errorMessage = `${response.status} ${response.statusText}`;

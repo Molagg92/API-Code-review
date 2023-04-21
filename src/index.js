@@ -1,9 +1,8 @@
 import './css/styles.css';
 import CurerncyService from './service.js';
+import getCurrency from './getCurrency.js';
 
-function getCurrency(foreinCurrency) {
-  CurerncyService.getCurrency(foreinCurrency)
-    .then(function (response) {
-      if (response.main){
-        printElements(response, )
-      }
+
+function printElements(response, userInputUS, foreinCurrency) {
+  document.querySelector('#showResponse').innterText = `${userInputUS} Dollars USD in ${foreinCurrency} currency happens to be ${response.conversion_result}`
+}
