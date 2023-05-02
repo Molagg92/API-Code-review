@@ -50,3 +50,10 @@ function handleFormSubmission(e) {
  }
 
 document.querySelector('form').addEventListener("submit", handleFormSubmission);
+
+
+
+
+
+
+
